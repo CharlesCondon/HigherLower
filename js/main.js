@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const game = document.querySelector('.gameContainer');
     const numCont = document.getElementById('numContainer');
     const submit = document.getElementById('submit');
+    let tries = 0;
 
-    const num = Math.floor(Math.random() * 1000);
-    console.log(num);
+    const answer = Math.floor(Math.random() * 1000);
+    console.log(answer);
 
     // help.onclick = () => {
     //     const helpPop = document.getElementById('helpPop');
@@ -21,5 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     submit.onclick = (e) => {
         const guess = document.getElementById('guess');
+        const guessNum = parseInt(guess.value);
+
+        if(guess.value !== '') {
+            tries = tries + 1;
+
+            if(guessNum === answer) {
+                if(tries > 1) {
+                    numCont.innerHTML = `<h3>Congrats!</h3> <br> <p>The number was ${answer}</p> <br> <p>It took you ( ${tries} ) tries</p>`;
+                }
+                else {
+                    numCont.innerHTML = `<h3>Congrats!</h3> <br> <p>The number was ${answer}</p> <br> <p>It took you ( ${tries} ) try</p>`;
+                }
+                submit.onclick = null;
+                
+            }
+            else if(guessNum < answer) {
+                numCont.textContent = '';
+                numCont.textContent = 'HIGHER';
+            }
+            else if(guessNum > answer) {
+                numCont.textContent = '';
+                numCont.textContent = 'LOWER';
+            }
+        }
     }
 });

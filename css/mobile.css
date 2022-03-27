@@ -26,6 +26,14 @@ header h1 {
     font-size: 1.5rem;
 }
 
+header img {
+    width: 30px;
+}
+
+#helpImg {
+    filter: invert(95%);
+}
+
 #start {
     position: fixed;
     top: 50%;
@@ -93,11 +101,17 @@ main {
 }
 
 #numContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 75px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     border: 0px solid black;
     border-radius: 6px;
     padding: 1rem;
-    width: 50%;
+    max-width: 250px;
     box-shadow: -1px -1px 5px rgba(255, 255, 255, .75),
                 3px 3px 5px rgba(70, 70, 70, .75);
 }
@@ -110,23 +124,28 @@ main {
 
 input[type=number] {
     color: rgb(233, 233, 233);
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: center;
     padding: .75rem;
     margin: .5rem;
     border: 0px solid black;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: rgb(252, 118, 106, 1);
     box-shadow: inset 0px 0px 7px rgba(49, 49, 49, .5),
                 inset 0px 0px 7px rgba(56, 56, 56, .5); 
 }
 
+input::placeholder {
+    color: rgba(49, 49, 49, .5);
+}
+
 #submit {
+    font-size: .75rem;
     width: 60%;
     padding: .25rem;
     margin: .5rem;
     border: 0;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: rgb(252, 118, 106, 1);
     box-shadow: -1px -1px 5px rgba(255, 255, 255, .75),
                 3px 3px 5px rgba(70, 70, 70, .75);
