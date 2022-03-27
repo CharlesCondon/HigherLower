@@ -29,20 +29,22 @@
         href="./css/mobile.css"
     />
 
-    <link
-        rel="stylesheet"
-        media="only screen and (min-width: 1200px)"
-        href="./css/desktopXL.css"
-    />
 </head>
 <body>
     <header>
         <img id='logoImg' src="./assets/eye.webp" alt="logo" />
         <h1><strong>Higher Lower</strong></h1>
-        <img id='helpImg' src="./assets/info.png" alt="help" />
+        <img class='helpImg' src="./assets/info.png" alt="help" />
     </header>
     <main>
         <button id='start'>Start</button>
+
+        <div id="helpPop" class="helper">
+            <p>Guess the number in as few tries as possible</p>
+            <hr>
+            <p class="instr"> - "Higher" indicates your guess was too low</p>
+            <p class="instr"> - "Lower" indicates your guess was too high</p>
+        </div>
 
         <div class="gameContainer">
             <div id="numContainer">Guess A number between <br> 1 and 1000</div>

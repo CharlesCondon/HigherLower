@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // const help = document.querySelector(".helpImg");
+    const help = document.querySelector(".helpImg");
     const start = document.getElementById('start');
     const game = document.querySelector('.gameContainer');
     const numCont = document.getElementById('numContainer');
@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const answer = Math.floor(Math.random() * 1000);
     console.log(answer);
 
-    // help.onclick = () => {
-    //     const helpPop = document.getElementById('helpPop');
-    //     helpPop.classList.toggle("show");
-    // }
+    help.onclick = () => {
+        const helpPop = document.getElementById('helpPop');
+        helpPop.classList.toggle("show");
+    }
 
     start.onclick = (e) => {
         e.target.classList.toggle('hide');
