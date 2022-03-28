@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const guess = document.getElementById('guess');
         const guessNum = parseInt(guess.value);
 
-        if(guess.value !== '') {
+        if(guess.value !== '' && guessNum !== NaN) {
             tries = tries + 1;
 
             if(guessNum === answer) {
@@ -37,12 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 submit.onclick = null;
                 
             }
+            else if(guessNum === 69) {
+                numCont.textContent = 'nice.';
+            }
+            else if(guessNum === 420) {
+                numCont.textContent = 'hell yeah';
+            }
             else if(guessNum < answer) {
-                numCont.textContent = '';
                 numCont.textContent = 'HIGHER';
             }
             else if(guessNum > answer) {
-                numCont.textContent = '';
                 numCont.textContent = 'LOWER';
             }
         }
