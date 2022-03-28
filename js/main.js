@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const help = document.querySelector(".helpImg");
+    const eye = document.querySelector(".logoImg");
     const start = document.getElementById('start');
     const game = document.querySelector('.gameContainer');
     const numCont = document.getElementById('numContainer');
@@ -13,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     help.onclick = () => {
         const helpPop = document.getElementById('helpPop');
         helpPop.classList.toggle("show");
+    }
+
+    eye.onclick = (e) => {
+        let x = './assets/close.png';
+        let y = './assets/eye.webp';
+        const eyePop = document.getElementById('eyePop');
+        console.log(e.target.src)
+
+        eyePop.classList.toggle("show");
+
     }
 
     start.onclick = (e) => {

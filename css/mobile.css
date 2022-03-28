@@ -43,15 +43,15 @@ header img {
     overflow: hidden;
     visibility: hidden;
     width: 75%;
-    background-color: rgb(177, 82, 73);
+    background-color: rgb(241, 146, 137);
     color: #fff;
     text-align: left;
     border-radius: 10px;
     padding: 20px 20px;
     position: absolute;
     font-size: 1.5rem;
-    border: 2px solid rgb(141, 65, 58);
-    box-shadow: 0px 2px 18px #000000;
+    border: 2px solid rgb(243, 137, 129);
+    box-shadow: 0px 2px 18px #f13737;
     z-index: 10;
 }
 
@@ -63,6 +63,60 @@ header img {
     visibility: visible; 
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+}
+
+.eye {
+    position: absolute;
+    max-width: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    visibility: hidden;
+    width: 75%;
+    background-color: rgb(241, 146, 137);
+    color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    padding: 20px 20px;
+    position: absolute;
+    font-size: 1.5rem;
+    border: 2px solid rgb(243, 137, 129);
+    box-shadow: 0px 2px 18px #f13737;
+    z-index: 10;
+}
+
+a {
+    color: rgb(240, 240, 240);
+}
+
+a:active {
+    color: black;
+}
+
+.eye p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.eye img {
+    width: 30px;
+    height: 30px;
+    filter: invert(95%);
+    padding: 1rem;
+}
+
+.eye.show {
+    visibility: visible; 
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.eye h2 {
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 #start {
