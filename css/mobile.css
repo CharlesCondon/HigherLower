@@ -154,6 +154,7 @@ main {
 }
 
 input[type=number] {
+    -webkit-appearance: none;
     color: rgb(233, 233, 233);
     font-size: 1.25rem;
     text-align: center;
